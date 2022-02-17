@@ -121,3 +121,5 @@ mmtrack/.mim
 *.pth
 *.py~
 *.sh~
+*.tar.gz
+*.mp4

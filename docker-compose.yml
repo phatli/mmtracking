@@ -1,0 +1,19 @@
+version: "3.8"
+services:
+  mmtrack:
+    image: phatli/mmtrack:cu111
+    stdin_open: true
+    tty: true
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    volumes:
+      - type: bind
+        source: .
+        target: /home/user/code/mmtrack
+    dns: 
+      - 8.8.8.8
